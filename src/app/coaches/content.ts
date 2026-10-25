@@ -25,7 +25,7 @@ export const coachesContent = {
     headline: "Your students need you. The rest of your week doesn't.",
     subhead:
       "The real limit on a coaching practice isn't skill or demand. It's your attention, spread across every student between sessions. We find the one job that eats your week and take it off you.",
-    cta: "Book a 20-minute conversation →",
+    cta: "Book a free 20-minute conversation →",
   },
 
   scene: {
@@ -127,8 +127,8 @@ export const coachesContent = {
 
   cta: {
     heading: "Tell us where your week goes.",
-    body: "Twenty minutes. You talk, we listen, and we'll tell you plainly whether there's a job worth taking off you.",
-    button: "Book a 20-minute conversation →",
+    body: "Twenty minutes, free. You talk, we listen, and we'll tell you plainly whether there's a job worth taking off you.",
+    button: "Book a free 20-minute conversation →",
     emailLabel: "OR WRITE TO",
   },
 } as const;

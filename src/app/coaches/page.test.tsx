@@ -15,7 +15,7 @@ describe("Coaches route", () => {
     expect(within(main).getByText(coachesContent.hero.subhead)).toBeInTheDocument();
 
     const bookingLinks = within(main).getAllByRole("link", {
-      name: "Book a 20-minute conversation →",
+      name: "Book a free 20-minute conversation →",
     });
     expect(bookingLinks).toHaveLength(2);
     bookingLinks.forEach((link) => expect(link).toHaveAttribute("href", BOOKING_URL));

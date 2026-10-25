@@ -17,13 +17,13 @@ describe("Services route", () => {
     expect(within(main).getByText("60 MINUTES · WHERE YOUR HOURS GO")).toBeInTheDocument();
     expect(within(main).getByText(/^A 60-minute structured walkthrough/)).toBeInTheDocument();
     expect(within(main).getByText("SCOPED PER PROJECT · MONTHLY RETAINERS")).toBeInTheDocument();
-    expect(within(main).getByText(/Every engagement starts with a 20-minute conversation\./)).toBeInTheDocument();
-    expect(main).not.toHaveTextContent(/free|guarantee|5\+ HRS/i);
+    expect(within(main).getByText(/Every engagement starts with a free 20-minute conversation\./)).toBeInTheDocument();
+    expect(main).not.toHaveTextContent(/guarantee|5\+ HRS|it.s free/i);
     expect(within(main).getByRole("link", { name: "contact@sanganak.ai →" })).toHaveAttribute(
       "href",
       "mailto:contact@sanganak.ai",
     );
-    expect(within(main).getByRole("heading", { level: 2, name: "Start with a 20-minute intro" })).toBeInTheDocument();
+    expect(within(main).getByRole("heading", { level: 2, name: "Start with a free 20-minute intro" })).toBeInTheDocument();
     expect(within(main).getByTestId("booking-embed").querySelector("[data-cal-link]")).toHaveAttribute(
       "data-cal-link",
       "samyak-sahu/intro",

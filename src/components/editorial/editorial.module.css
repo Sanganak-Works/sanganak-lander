@@ -368,6 +368,7 @@
   .servicesStatement {
     width: 100%;
     max-width: 760px;
+    flex: 0 1 auto;
   }
 
   .contactStack {

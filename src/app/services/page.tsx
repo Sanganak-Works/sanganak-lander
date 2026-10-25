@@ -27,10 +27,10 @@ export default function ServicesPage() {
 
       <section className={styles.bookingSection} aria-labelledby="booking-title">
         <div className={styles.bookingCopy}>
-          <h2 id="booking-title">Start with a 20-minute intro</h2>
+          <h2 id="booking-title">Start with a free 20-minute intro</h2>
           <p>
-            Tell us where your week goes. We&apos;ll tell you plainly whether there&apos;s a
-            job worth taking off your plate.
+            No charge, no pitch deck. Tell us where your week goes, and we&apos;ll tell
+            you plainly whether there&apos;s a job worth taking off your plate.
           </p>
         </div>
         <div className={styles.bookingEmbed} data-testid="booking-embed">
@@ -69,7 +69,7 @@ export default function ServicesPage() {
 
       <section className={styles.servicesFooter} aria-label="Start an engagement">
         <p className={styles.servicesStatement}>
-          Every engagement starts with a 20-minute conversation. If there&apos;s
+          Every engagement starts with a free 20-minute conversation. If there&apos;s
           something worth fixing, the audit maps where your team&apos;s hours go. Anything
           worth automating after that, we build.
         </p>
