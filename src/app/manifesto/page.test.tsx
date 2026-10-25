@@ -24,9 +24,9 @@ describe("Manifesto route", () => {
     });
 
     expect(within(main).getByText("We believe that with the right intent, you can just do things.")).toBeInTheDocument();
-    expect(within(main).getByRole("link", { name: "contact@sanganak.works →" })).toHaveAttribute(
+    expect(within(main).getByRole("link", { name: "contact@sanganak.ai →" })).toHaveAttribute(
       "href",
-      "mailto:contact@sanganak.works",
+      "mailto:contact@sanganak.ai",
     );
     expect(main).toHaveAttribute("id", "main-content");
   });

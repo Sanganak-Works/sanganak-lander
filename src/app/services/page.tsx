@@ -29,7 +29,7 @@ export default function ServicesPage() {
           <div className={styles.offeringCopy}>
             <h2>AI Workflow Audit</h2>
             <p>
-              A 45-minute structured walkthrough of how your team actually works. You get
+              A 60-minute structured walkthrough of how your team actually works. You get
               an effort-impact matrix, three to seven tool or agent prescriptions, and a
               four-day quick-start plan.
             </p>
@@ -61,8 +61,8 @@ export default function ServicesPage() {
         </p>
         <div className={styles.contactStack}>
           <p>WRITE TO US AT</p>
-          <a className={styles.contactButton} href="mailto:contact@sanganak.works">
-            contact@sanganak.works →
+          <a className={styles.contactButton} href="mailto:contact@sanganak.ai">
+            contact@sanganak.ai →
           </a>
         </div>
       </section>

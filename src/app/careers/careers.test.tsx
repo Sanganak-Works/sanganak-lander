@@ -119,7 +119,7 @@ describe("Careers routes", () => {
       );
       expect(within(main).getByRole("link", { name: "APPLY VIA EMAIL →" })).toHaveAttribute(
         "href",
-        "mailto:contact@sanganak.works",
+        "mailto:contact@sanganak.ai",
       );
       expect(main).toHaveAttribute("id", "main-content");
     },

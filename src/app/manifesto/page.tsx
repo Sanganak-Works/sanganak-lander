@@ -111,8 +111,8 @@ export default function ManifestoPage() {
             We believe that with the right intent, you can just do things.
           </p>
           <p>We envision this future for us, and for all the others who we build for.</p>
-          <a className={styles.manifestoContact} href="mailto:contact@sanganak.works">
-            contact@sanganak.works →
+          <a className={styles.manifestoContact} href="mailto:contact@sanganak.ai">
+            contact@sanganak.ai →
           </a>
         </div>
       </section>
