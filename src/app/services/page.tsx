@@ -95,9 +95,8 @@ export default function ServicesPage() {
 
       <section className={styles.servicesFooter} aria-label="Start an engagement">
         <p className={styles.servicesStatement}>
-          Every engagement starts with a free 20-minute conversation. If there&apos;s
-          something worth fixing, the audit maps where your team&apos;s hours go. Anything
-          worth automating after that, we build.
+          A new AI tool drops every day. We test them so you don&apos;t have to, and we
+          only bring you what actually earns its place in your week.
         </p>
         <div className={styles.contactStack}>
           <p>WRITE TO US AT</p>

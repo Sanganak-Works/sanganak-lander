@@ -40,7 +40,8 @@ describe("Services route", () => {
     expect(auditCard).not.toHaveTextContent(/async/i);
     expect(within(main).getAllByText(/60[- ]minute/i).every((el) => auditCard.contains(el))).toBe(true);
     expect(within(main).getByText("SCOPED PER PROJECT · MONTHLY RETAINERS")).toBeInTheDocument();
-    expect(within(main).getByText(/Every engagement starts with a free 20-minute conversation\./)).toBeInTheDocument();
+    expect(within(main).getByText("A new AI tool drops every day. We test them so you don't have to, and we only bring you what actually earns its place in your week.")).toBeInTheDocument();
+    expect(main).not.toHaveTextContent(/Every engagement starts/);
     expect(main).not.toHaveTextContent(/guarantee|5\+ HRS|it.s free/i);
     expect(within(main).getByRole("link", { name: "contact@sanganak.ai →" })).toHaveAttribute(
       "href",
