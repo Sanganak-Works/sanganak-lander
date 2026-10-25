@@ -61,16 +61,41 @@
   padding: 30px;
   border: 2px solid var(--color-background, #050505);
   color: #000;
+  box-shadow: 8px 8px 0 var(--card-shadow);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+/* Neo-brutalist lift: the card rises 3px toward the light and its offset
+   shadow grows by the same amount; pressing pushes it back down. Hover is
+   limited to devices that really hover, so taps don't leave cards lifted. */
+@media (hover: hover) {
+  .offeringCard:hover {
+    box-shadow: 11px 11px 0 var(--card-shadow);
+    transform: translate(-3px, -3px);
+  }
+}
+
+.offeringCard:focus-within {
+  box-shadow: 11px 11px 0 var(--card-shadow);
+  transform: translate(-3px, -3px);
+}
+
+.offeringCard:active {
+  box-shadow: 5px 5px 0 var(--card-shadow);
+  transform: translate(3px, 3px);
+  transition-duration: 80ms;
 }
 
 .auditCard {
+  --card-shadow: var(--color-background, #050505);
   background: var(--color-primary, #2db7b0);
-  box-shadow: 8px 8px 0 var(--color-background, #050505);
 }
 
 .buildCard {
+  --card-shadow: var(--color-accent, #ef5b4c);
   background: var(--color-secondary, #f2a51a);
-  box-shadow: 8px 8px 0 var(--color-accent, #ef5b4c);
 }
 
 .offeringCopy {
@@ -153,10 +178,11 @@
   border: 0;
 }
 
+/* The Cal inline embed sizes its own iframe; the min-height only reserves
+   room while it loads, so the page doesn't jump. */
 .bookingEmbed {
   width: 100%;
-  min-height: 640px;
-  height: 640px;
+  min-height: 540px;
 }
 
 .servicesFooter {
@@ -379,11 +405,7 @@
   }
 
   .bookingSection {
-    padding: 56px 32px;
-  }
-
-  .bookingEmbed {
-    height: 760px;
+    padding: 48px 32px;
   }
 
   .bookingIntroWithVideo {
@@ -458,6 +480,10 @@
 
   .servicesIntro {
     padding-block: 48px 32px;
+  }
+
+  .bookingSection {
+    padding: 40px 20px;
   }
 
   .servicesTitle {
@@ -558,5 +584,16 @@
   .highlightedBelief {
     font-size: 25px;
     line-height: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offeringCard,
+  .offeringCard:hover,
+  .offeringCard:focus-within,
+  .offeringCard:active {
+    box-shadow: 8px 8px 0 var(--card-shadow);
+    transform: none;
+    transition: none;
   }
 }
