@@ -14,8 +14,9 @@ describe("Services route", () => {
     const main = screen.getByRole("main");
     expect(within(main).getAllByRole("heading", { level: 1 })).toHaveLength(1);
     expect(within(main).getByRole("heading", { level: 1, name: "Reclaim your hours" })).toBeInTheDocument();
-    expect(within(main).getByText("60 MINUTES · WHERE YOUR HOURS GO")).toBeInTheDocument();
-    expect(within(main).getByText(/^A 60-minute structured walkthrough/)).toBeInTheDocument();
+    expect(within(main).getByText("ASYNC · SCOPED TO YOUR PRACTICE")).toBeInTheDocument();
+    expect(within(main).getByText(/^A structured, mostly async look at how your practice actually runs, from your calendar to your inbox to your students' week\./)).toBeInTheDocument();
+    expect(main).not.toHaveTextContent(/60[- ]minute|60 MINUTES/i);
     expect(within(main).getByText("SCOPED PER PROJECT · MONTHLY RETAINERS")).toBeInTheDocument();
     expect(within(main).getByText(/Every engagement starts with a free 20-minute conversation\./)).toBeInTheDocument();
     expect(main).not.toHaveTextContent(/guarantee|5\+ HRS|it.s free/i);

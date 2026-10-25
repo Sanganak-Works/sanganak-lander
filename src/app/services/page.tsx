@@ -51,13 +51,14 @@ export default function ServicesPage() {
           <div className={styles.offeringCopy}>
             <h2>AI Workflow Audit</h2>
             <p>
-              A 60-minute structured walkthrough of how your team actually works. You get
-              an effort-impact matrix, three to seven tool or agent prescriptions, and a
+              A structured, mostly async look at how your practice actually runs, from
+              your calendar to your inbox to your students&apos; week. You get an
+              effort-impact matrix, three to seven tool or agent prescriptions, and a
               four-day quick-start plan.
             </p>
           </div>
           <p className={styles.offeringMeta}>
-            60 MINUTES · WHERE YOUR HOURS GO
+            ASYNC · SCOPED TO YOUR PRACTICE
           </p>
         </article>
 
