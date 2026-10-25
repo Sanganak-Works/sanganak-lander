@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import styles from "@/components/editorial/editorial.module.css";
 import { Nav } from "@/components/nav";
+import { CalEmbed } from "@/components/booking/cal-embed";
 
 export const metadata: Metadata = {
   title: "Services · Sanganak Works",
@@ -51,6 +52,19 @@ export default function ServicesPage() {
             SCOPED PER PROJECT · MONTHLY RETAINERS
           </p>
         </article>
+      </section>
+
+      <section className={styles.bookingSection} aria-labelledby="booking-title">
+        <div className={styles.bookingCopy}>
+          <h2 id="booking-title">Start with a 20-minute intro</h2>
+          <p>
+            Tell us where your week goes. We&apos;ll tell you plainly whether there&apos;s a
+            job worth taking off your plate.
+          </p>
+        </div>
+        <div className={styles.bookingEmbed} data-testid="booking-embed">
+          <CalEmbed />
+        </div>
       </section>
 
       <section className={styles.servicesFooter} aria-label="Start an engagement">

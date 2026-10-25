@@ -1,5 +1,10 @@
 import { render, screen, within } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+
+vi.mock("@calcom/embed-react", () => ({
+  default: (props: { calLink: string }) => <div data-cal-link={props.calLink} />,
+  getCalApi: async () => () => {},
+}));
 import ServicesPage from "./page";
 
 describe("Services route", () => {
@@ -17,6 +22,11 @@ describe("Services route", () => {
     expect(within(main).getByRole("link", { name: "contact@sanganak.ai →" })).toHaveAttribute(
       "href",
       "mailto:contact@sanganak.ai",
+    );
+    expect(within(main).getByRole("heading", { level: 2, name: "Start with a 20-minute intro" })).toBeInTheDocument();
+    expect(within(main).getByTestId("booking-embed").querySelector("[data-cal-link]")).toHaveAttribute(
+      "data-cal-link",
+      "samyak-sahu/intro",
     );
     expect(main).toHaveAttribute("id", "main-content");
   });
