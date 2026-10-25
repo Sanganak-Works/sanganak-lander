@@ -6,9 +6,8 @@
 // - No labels such as "AI-native", "agency", "services firm" or "holding company".
 // - Any example uses invented sitcom characters and is labelled as illustrative.
 
-// TODO(sam): replace with the cal.com booking link once it exists. Every
-// "book a conversation" button on /coaches reads from this one constant.
-export const BOOKING_URL = "mailto:contact@sanganak.ai";
+// Every "book a conversation" button on /coaches reads from this one constant.
+export const BOOKING_URL = "https://cal.com/samyak-sahu/intro";
 
 export const CONTACT_EMAIL = "contact@sanganak.ai";
 
