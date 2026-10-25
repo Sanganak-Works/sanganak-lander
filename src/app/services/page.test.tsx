@@ -28,6 +28,7 @@ describe("Services route", () => {
       "data-cal-link",
       "samyak-sahu/intro",
     );
+    expect(within(main).queryByTitle("A 60-second intro from Sam")).not.toBeInTheDocument();
     expect(main).toHaveAttribute("id", "main-content");
   });
 });

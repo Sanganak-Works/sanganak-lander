@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import styles from "@/components/editorial/editorial.module.css";
 import { Nav } from "@/components/nav";
 import { CalEmbed } from "@/components/booking/cal-embed";
+import { LOOM_URL, LoomVideo, toLoomEmbedUrl } from "@/components/booking/loom-video";
 
 export const metadata: Metadata = {
   title: "Services · Sanganak Works",
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const hasIntroVideo = toLoomEmbedUrl(LOOM_URL) !== null;
+
   return (
     <>
       <Nav />
@@ -26,12 +29,17 @@ export default function ServicesPage() {
       </section>
 
       <section className={styles.bookingSection} aria-labelledby="booking-title">
-        <div className={styles.bookingCopy}>
-          <h2 id="booking-title">Start with a free 20-minute intro</h2>
-          <p>
-            No charge, no pitch deck. Tell us where your week goes, and we&apos;ll tell
-            you plainly whether there&apos;s a job worth taking off your plate.
-          </p>
+        <div
+          className={`${styles.bookingIntro} ${hasIntroVideo ? styles.bookingIntroWithVideo : ""}`}
+        >
+          <div className={styles.bookingCopy}>
+            <h2 id="booking-title">Start with a free 20-minute intro</h2>
+            <p>
+              No charge, no pitch deck. Tell us where your week goes, and we&apos;ll tell
+              you plainly whether there&apos;s a job worth taking off your plate.
+            </p>
+          </div>
+          <LoomVideo url={LOOM_URL} />
         </div>
         <div className={styles.bookingEmbed} data-testid="booking-embed">
           <CalEmbed />
