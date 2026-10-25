@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import localFont from "next/font/local";
+import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
 
 const displayFont = Bricolage_Grotesque({
@@ -61,7 +62,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${displayFont.variable} ${monoFont.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }

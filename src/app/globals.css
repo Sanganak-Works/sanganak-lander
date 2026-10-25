@@ -165,6 +165,19 @@ a:focus-visible {
   line-height: 1;
 }
 
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 22px 48px;
+  background: var(--color-canvas);
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
 .home-hero {
   display: grid;
   min-height: calc(100svh - 86px);
@@ -322,6 +335,10 @@ a:focus-visible {
 
   .brand-wordmark {
     font-size: 19px;
+  }
+
+  .site-footer {
+    padding-inline: 24px;
   }
 
   .menu-trigger {
