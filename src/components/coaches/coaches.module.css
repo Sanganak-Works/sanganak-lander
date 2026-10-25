@@ -266,6 +266,14 @@
   line-height: 1;
 }
 
+.sceneTeamLine {
+  grid-column: 2;
+  margin-top: -8px;
+  color: var(--color-muted, #b8b6ad);
+  font-size: 17px;
+  line-height: 27px;
+}
+
 .demoCopy p {
   color: var(--color-copy, #c8c3ba);
   font-size: 17px;
@@ -490,7 +498,8 @@
     font-size: clamp(54px, 9vw, 76px);
   }
 
-  .sceneClosing {
+  .sceneClosing,
+  .sceneTeamLine {
     grid-column: 1;
   }
 

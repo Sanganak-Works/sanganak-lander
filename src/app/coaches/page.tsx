@@ -54,6 +54,7 @@ export default function CoachesPage() {
             ))}
           </ul>
           <p className={styles.sceneClosing}>{scene.closing}</p>
+          <p className={styles.sceneTeamLine}>{scene.teamLine}</p>
         </section>
 
         <section className={styles.how} aria-labelledby="how-title">
@@ -82,6 +83,7 @@ export default function CoachesPage() {
               {demo.heading}
             </h2>
             <p>{demo.body}</p>
+            <p>{demo.otherExams}</p>
             <p className={styles.disclaimer}>{demo.disclaimer}</p>
           </div>
           <figure className={styles.chat} aria-label="Illustrative check-in conversation">

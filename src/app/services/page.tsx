@@ -25,6 +25,19 @@ export default function ServicesPage() {
         </p>
       </section>
 
+      <section className={styles.bookingSection} aria-labelledby="booking-title">
+        <div className={styles.bookingCopy}>
+          <h2 id="booking-title">Start with a 20-minute intro</h2>
+          <p>
+            Tell us where your week goes. We&apos;ll tell you plainly whether there&apos;s a
+            job worth taking off your plate.
+          </p>
+        </div>
+        <div className={styles.bookingEmbed} data-testid="booking-embed">
+          <CalEmbed />
+        </div>
+      </section>
+
       <section className={styles.offerings} aria-label="Services offered">
         <article className={`${styles.offeringCard} ${styles.auditCard}`}>
           <div className={styles.offeringCopy}>
@@ -54,24 +67,11 @@ export default function ServicesPage() {
         </article>
       </section>
 
-      <section className={styles.bookingSection} aria-labelledby="booking-title">
-        <div className={styles.bookingCopy}>
-          <h2 id="booking-title">Start with a 20-minute intro</h2>
-          <p>
-            Tell us where your week goes. We&apos;ll tell you plainly whether there&apos;s a
-            job worth taking off your plate.
-          </p>
-        </div>
-        <div className={styles.bookingEmbed} data-testid="booking-embed">
-          <CalEmbed />
-        </div>
-      </section>
-
       <section className={styles.servicesFooter} aria-label="Start an engagement">
         <p className={styles.servicesStatement}>
-          Every engagement starts with the audit. It shows where your team&apos;s hours
-          go and which of them are worth handing to an agent. Anything worth automating
-          after that, we build.
+          Every engagement starts with a 20-minute conversation. If there&apos;s
+          something worth fixing, the audit maps where your team&apos;s hours go. Anything
+          worth automating after that, we build.
         </p>
         <div className={styles.contactStack}>
           <p>WRITE TO US AT</p>

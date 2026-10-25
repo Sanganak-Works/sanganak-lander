@@ -40,6 +40,7 @@ export const coachesContent = {
     ],
     closing:
       "None of it is coaching, and all of it waits on you. It's often why a good practice stops taking new students.",
+    teamLine: "Running a team? Multiply that by every tutor, then add keeping track of all of them.",
   },
 
   howWeWork: {
@@ -76,6 +77,7 @@ export const coachesContent = {
     body: "The student gets a check-in and a next step. You get a short note before Thursday's session, instead of twenty messages.",
     disclaimer:
       "Illustrative only. Invented sitcom characters, not real students, and not a screen from a live product.",
+    otherExams: "Same rhythm for an LSAT PrepTest review, an MCAT full-length or a CFA mock.",
     chatTitle: "Chandler · GMAT prep · coach: Ross",
     messages: [
       {

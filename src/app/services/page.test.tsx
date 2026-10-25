@@ -17,7 +17,7 @@ describe("Services route", () => {
     expect(within(main).getByText("60 MINUTES · WHERE YOUR HOURS GO")).toBeInTheDocument();
     expect(within(main).getByText(/^A 60-minute structured walkthrough/)).toBeInTheDocument();
     expect(within(main).getByText("SCOPED PER PROJECT · MONTHLY RETAINERS")).toBeInTheDocument();
-    expect(within(main).getByText(/It shows where your team's hours go and which of them are worth handing to an agent\./)).toBeInTheDocument();
+    expect(within(main).getByText(/Every engagement starts with a 20-minute conversation\./)).toBeInTheDocument();
     expect(main).not.toHaveTextContent(/free|guarantee|5\+ HRS/i);
     expect(within(main).getByRole("link", { name: "contact@sanganak.ai →" })).toHaveAttribute(
       "href",
