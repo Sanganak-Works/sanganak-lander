@@ -77,6 +77,19 @@ describe("Nav", () => {
     },
   );
 
+  it("renders only the brand lockup in its minimal variant", () => {
+    render(<Nav minimal />);
+
+    expect(screen.getByRole("link", { name: "Sanganak Works home" })).toHaveAttribute(
+      "href",
+      "/",
+    );
+    expect(screen.getByRole("link", { name: "Skip to content" })).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "Masala Dew" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "Services" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Open navigation menu" })).not.toBeInTheDocument();
+  });
+
   it("puts a skip link before the repeated header navigation", () => {
     const { container } = render(<Nav />);
 
