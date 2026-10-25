@@ -35,7 +35,7 @@ export default function ServicesPage() {
             </p>
           </div>
           <p className={styles.offeringMeta}>
-            60 MINUTES · 5+ HRS/WEEK BACK OR IT&apos;S FREE
+            60 MINUTES · WHERE YOUR HOURS GO
           </p>
         </article>
 
@@ -55,9 +55,9 @@ export default function ServicesPage() {
 
       <section className={styles.servicesFooter} aria-label="Start an engagement">
         <p className={styles.servicesStatement}>
-          Every engagement starts with the audit. If it doesn&apos;t surface at least five
-          hours a week for your team, the audit is free. Anything worth automating after
-          that, we build.
+          Every engagement starts with the audit. It shows where your team&apos;s hours
+          go and which of them are worth handing to an agent. Anything worth automating
+          after that, we build.
         </p>
         <div className={styles.contactStack}>
           <p>WRITE TO US AT</p>
