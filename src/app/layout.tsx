@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Tiro_Devanagari_Hindi, Noto_Sans_Arabic } from "next/font/google";
+import { Bricolage_Grotesque, Noto_Sans_Devanagari, Noto_Sans_Arabic } from "next/font/google";
 import localFont from "next/font/local";
 import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
@@ -10,9 +10,9 @@ const displayFont = Bricolage_Grotesque({
   display: "swap",
 });
 
-const hindiFont = Tiro_Devanagari_Hindi({
+const hindiFont = Noto_Sans_Devanagari({
   variable: "--font-wordmark-hi",
-  weight: "400",
+  weight: "700",
   subsets: ["devanagari"],
   display: "swap",
   preload: false,
