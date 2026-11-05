@@ -20,7 +20,7 @@ describe("Home", () => {
     expect(screen.getByText("01 / BUILD + WRITE + ADVISE")).toBeInTheDocument();
     expect(screen.getByText("COMPUTE / CULTURE")).toBeInTheDocument();
     expect(screen.getByText("sanganak.works")).toBeInTheDocument();
-    expect(screen.getByRole("img", { name: "Sanganak Works computer" })).toHaveAttribute(
+    expect(screen.getByRole("img", { name: "Sanganak computer" })).toHaveAttribute(
       "src",
       expect.stringContaining("computer-logo-fmq-0.svg"),
     );

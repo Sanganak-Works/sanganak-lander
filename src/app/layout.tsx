@@ -40,13 +40,13 @@ const monoFont = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sanganak.works"),
-  title: "Sanganak Works",
+  title: "Sanganak",
   description:
     "We build, write, and advise about tech and culture; from India for the world.",
   openGraph: {
-    title: "Sanganak Works",
+    title: "Sanganak",
     description: "Frontier technology, for those who deserve it.",
-    siteName: "Sanganak Works",
+    siteName: "Sanganak",
     type: "website",
     url: "/",
   },

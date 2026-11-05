@@ -31,11 +31,11 @@ export function Nav({ minimal = false }: NavProps = {}) {
       </a>
       <header className="site-header">
         <nav className="site-nav" aria-label="Primary navigation">
-          <Link className="brand-lockup" href="/" aria-label="Sanganak Works home">
+          <Link className="brand-lockup" href="/" aria-label="Sanganak home">
             <span className="brand-mark" aria-hidden="true">
               <Image src="/brand/logo-crop.png" alt="" width={48} height={48} priority />
             </span>
-            <span className="brand-wordmark">Sanganak Works</span>
+            <span className="brand-wordmark">Sanganak</span>
           </Link>
 
           {minimal ? null : (

@@ -15,7 +15,7 @@ export const SARAS_URL = "https://sarasgmat.com";
 
 export const coachesContent = {
   meta: {
-    title: "Coaches · Sanganak Works",
+    title: "Coaches · Sanganak",
     description:
       "We take the busywork between sessions off test-prep coaches, so their attention goes to their students.",
   },

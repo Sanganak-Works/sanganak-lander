@@ -47,7 +47,7 @@ const roles: readonly Role[] = [
     title: "Lead, Design and Branding",
     href: "/careers/design-lead",
     blurb:
-      "Own the brand and produce brand artifacts, video and media for Saras and Sanganak Works in an AI-native design environment.",
+      "Own the brand and produce brand artifacts, video and media for Saras and Sanganak in an AI-native design environment.",
     meta: "REMOTE · LEAD · AI-NATIVE DESIGN →",
     tag: "Saras",
     theme: styles.cardCoral,

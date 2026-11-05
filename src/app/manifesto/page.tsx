@@ -3,7 +3,7 @@ import styles from "@/components/editorial/editorial.module.css";
 import { Nav } from "@/components/nav";
 
 export const metadata: Metadata = {
-  title: "Manifesto · Sanganak Works",
+  title: "Manifesto · Sanganak",
   description: "We believe that with the right intent, you can just do things.",
 };
 

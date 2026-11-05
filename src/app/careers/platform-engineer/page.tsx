@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ManifestoLink, RoleDetail, SarasLink } from "@/components/careers/role-detail";
 
-export const metadata: Metadata = { title: "Platform Engineer · Sanganak Works" };
+export const metadata: Metadata = { title: "Platform Engineer · Sanganak" };
 
 export default function PlatformEngineerPage() {
   return (

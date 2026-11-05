@@ -35,7 +35,7 @@ export function HomeHero() {
           <Image
             className="computer-art"
             src="/brand/computer-logo-fmq-0.svg"
-            alt="Sanganak Works computer"
+            alt="Sanganak computer"
             width={512}
             height={512}
             priority

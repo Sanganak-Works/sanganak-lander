@@ -1,5 +1,5 @@
 // The legal entity name must appear verbatim on every page (Meta Business
-// Verification). Keep "Sanganak Works" as the brand everywhere else.
+// Verification). Keep "Sanganak" as the brand everywhere else.
 export const LEGAL_NAME = "Sanganak Works Private Limited";
 
 export function SiteFooter() {

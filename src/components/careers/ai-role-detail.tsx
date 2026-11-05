@@ -29,7 +29,7 @@ export function AiRoleDetail() {
             </p>
             <p>
               What we build through Saras feeds forward towards our even larger ambitions at
-              Sanganak Works: to bring frontier technology to an exciting space where it can
+              Sanganak: to bring frontier technology to an exciting space where it can
               produce meaningful outcomes beyond benchmarks. We&apos;re independent, bootstrapped,
               remote-first but mission-oriented.
             </p>

@@ -10,4 +10,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 # Page titles
 
-Every page under the site sets a route-specific `metadata.title` in the form `<Page Name> · Sanganak Works`, using a middle dot (`·`, U+00B7) with a space on each side as the separator. Never use an em dash, en dash, hyphen, pipe or colon. Examples: `Careers · Sanganak Works`, `Platform Engineer · Sanganak Works`. The home page alone uses the bare `Sanganak Works` from `src/app/layout.tsx`.
+Every page under the site sets a route-specific `metadata.title` in the form `<Page Name> · Sanganak`, using a middle dot (`·`, U+00B7) with a space on each side as the separator. Never use an em dash, en dash, hyphen, pipe or colon. Examples: `Careers · Sanganak`, `Platform Engineer · Sanganak`. The home page alone uses the bare `Sanganak` from `src/app/layout.tsx`.
