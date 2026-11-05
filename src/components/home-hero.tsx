@@ -34,8 +34,8 @@ export function HomeHero() {
         <div className="computer-card">
           <Image
             className="computer-art"
-            src="/brand/computer-logo-fmq-0.svg"
-            alt="Sanganak Works computer"
+            src="/brand/logo-crop.png"
+            alt="Sanganak mascot"
             width={512}
             height={512}
             priority
@@ -43,7 +43,7 @@ export function HomeHero() {
         </div>
         <div className="computer-caption" aria-label="Computer artwork caption">
           <span>COMPUTE / CULTURE</span>
-          <span>sanganak.works</span>
+          <span>sanganak.ai</span>
         </div>
       </div>
     </section>

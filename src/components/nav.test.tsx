@@ -80,7 +80,7 @@ describe("Nav", () => {
   it("renders only the brand lockup in its minimal variant", () => {
     render(<Nav minimal />);
 
-    expect(screen.getByRole("link", { name: "Sanganak Works home" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Sanganak home" })).toHaveAttribute(
       "href",
       "/",
     );

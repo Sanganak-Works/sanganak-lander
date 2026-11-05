@@ -5,7 +5,7 @@ import { CalEmbed } from "@/components/booking/cal-embed";
 import { LOOM_URL, LoomVideo, toLoomEmbedUrl } from "@/components/booking/loom-video";
 
 export const metadata: Metadata = {
-  title: "Services · Sanganak Works",
+  title: "Services · Sanganak",
   description:
     "AI workflow advice and agent builds for small teams that want their hours back.",
 };

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ManifestoLink, RoleDetail, SarasLink } from "@/components/careers/role-detail";
 
-export const metadata: Metadata = { title: "Lead, Design and Branding · Sanganak Works" };
+export const metadata: Metadata = { title: "Lead, Design and Branding · Sanganak" };
 
 export default function DesignLeadPage() {
   return (
@@ -18,7 +18,7 @@ export default function DesignLeadPage() {
         </p>
       }
       about={[
-        "Own the brand and produce brand artifacts for Sanganak Works and Saras",
+        "Own the brand and produce brand artifacts for Sanganak and Saras",
         "Produce video artifacts for media and product demonstration purposes",
         "Work fluently with AI-native design tools like Midjourney, and expect to live in an AI-native environment generally",
         "Understand interaction patterns and user journeys well enough to make design decisions that hold up in product, though the core mandate is brand",

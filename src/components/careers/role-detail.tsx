@@ -59,7 +59,7 @@ export function ApplyFooter({ compact = false }: { compact?: boolean }) {
   return (
     <footer className={`${styles.applyFooter} ${compact ? styles.aiApply : ""}`}>
       <div className={`${styles.container} ${styles.applyInner}`}>
-        <p className={styles.applyLabel}>SANGANAK WORKS / CAREERS / INDIA ↔ ANYWHERE</p>
+        <p className={styles.applyLabel}>SANGANAK / CAREERS / INDIA ↔ ANYWHERE</p>
         <a className={styles.applyButton} href="mailto:contact@sanganak.ai">
           APPLY VIA EMAIL →
         </a>
