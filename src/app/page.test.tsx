@@ -19,7 +19,7 @@ describe("Home", () => {
     ).toBeInTheDocument();
     expect(screen.getByText("01 / BUILD + WRITE + ADVISE")).toBeInTheDocument();
     expect(screen.getByText("COMPUTE / CULTURE")).toBeInTheDocument();
-    expect(screen.getByText("sanganak.works")).toBeInTheDocument();
+    expect(screen.getByText("sanganak.ai")).toBeInTheDocument();
     expect(screen.getByRole("img", { name: "Sanganak mascot" })).toHaveAttribute(
       "src",
       expect.stringContaining("logo-crop.png"),

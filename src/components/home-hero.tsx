@@ -43,7 +43,7 @@ export function HomeHero() {
         </div>
         <div className="computer-caption" aria-label="Computer artwork caption">
           <span>COMPUTE / CULTURE</span>
-          <span>sanganak.works</span>
+          <span>sanganak.ai</span>
         </div>
       </div>
     </section>
