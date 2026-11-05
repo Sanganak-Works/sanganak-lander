@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { GlitchWordmark } from "./glitch-wordmark";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -35,7 +36,7 @@ export function Nav({ minimal = false }: NavProps = {}) {
             <span className="brand-mark" aria-hidden="true">
               <Image src="/brand/logo-crop.png" alt="Sanganak mascot" width={48} height={48} priority />
             </span>
-            <span className="brand-wordmark">Sanganak</span>
+            <GlitchWordmark />
           </Link>
 
           {minimal ? null : (

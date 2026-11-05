@@ -410,3 +410,59 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* A stable em box leaves room for fallback fonts and both scripts' ascenders. */
+.glitch-wordmark {
+  display: inline-block;
+  position: relative;
+  width: 6em;
+  height: 2em;
+  overflow: hidden;
+  isolation: isolate;
+  vertical-align: middle;
+}
+.wordmark-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+.wordmark-layer[lang="hi"] {
+  font-family: var(--font-wordmark-hi), "Noto Sans Devanagari", serif;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+.wordmark-layer[lang="ur"] {
+  font-family: var(--font-wordmark-ur), "Noto Sans Arabic", sans-serif;
+  font-weight: 600;
+  letter-spacing: normal;
+  justify-content: flex-end;
+}
+.wordmark-teal, .wordmark-coral { visibility: hidden; }
+.glitch-wordmark[data-glitch="true"] .wordmark-ink {
+  animation: wordmark-jolt 100ms steps(1, end) infinite;
+}
+.glitch-wordmark[data-glitch="true"] .wordmark-teal,
+.glitch-wordmark[data-glitch="true"] .wordmark-coral {
+  visibility: visible;
+  pointer-events: none;
+  animation: wordmark-slice 150ms steps(1, end) infinite;
+}
+.wordmark-teal { color: #2db7b0; clip-path: inset(24% 0 52% 0); }
+.wordmark-coral { color: #ef5b4c; clip-path: inset(54% 0 25% 0); animation-direction: reverse !important; }
+@keyframes wordmark-jolt {
+  0%, 100% { transform: translateX(0); }
+  33% { transform: translateX(-1px); }
+  66% { transform: translateX(1px); }
+}
+@keyframes wordmark-slice {
+  0%, 100% { transform: translateX(3px); }
+  33% { transform: translateX(-3px); }
+  66% { transform: translateX(1px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glitch-wordmark .wordmark-layer { animation: none !important; }
+  .glitch-wordmark .wordmark-teal, .glitch-wordmark .wordmark-coral { visibility: hidden; }
+}
