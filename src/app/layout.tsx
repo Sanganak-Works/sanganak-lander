@@ -39,7 +39,7 @@ const monoFont = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sanganak.works"),
+  metadataBase: new URL("https://sanganak.ai"),
   title: "Sanganak",
   description:
     "We build, write, and advise about tech and culture; from India for the world.",
