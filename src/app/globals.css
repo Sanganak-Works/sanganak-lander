@@ -453,7 +453,7 @@ a:focus-visible {
 .glitch-wordmark[data-glitch="true"] .wordmark-coral {
   visibility: visible;
   pointer-events: none;
-  animation: wordmark-slice 150ms steps(1, end) infinite;
+  animation: wordmark-slice 100ms steps(1, end) infinite;
 }
 .wordmark-teal { color: #2db7b0; clip-path: inset(var(--band-teal) -4px calc(88% - var(--band-teal)) -4px); }
 .wordmark-coral { color: #ef5b4c; clip-path: inset(var(--band-coral) -4px calc(88% - var(--band-coral)) -4px); animation-direction: reverse !important; }

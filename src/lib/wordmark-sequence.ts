@@ -42,8 +42,9 @@ export function createWordmarkSequence(render: (frame: WordmarkFrame) => void) {
     return letters.join("");
   }
 
-  function transition(target: WordmarkScript, done: () => void, duration = 330) {
+  function transition(target: WordmarkScript, done: () => void, duration = 220) {
     let step = 0;
+    const started = performance.now();
     const positions = Array.from({ length: 8 }, (_, i) => i);
     for (let i = positions.length - 1; i > 0; i--) {
       const other = Math.floor(random() * (i + 1));
@@ -57,7 +58,7 @@ export function createWordmarkSequence(render: (frame: WordmarkFrame) => void) {
       // Ordered, non-overlapping 12%-high slices; CSS uses these same stops to cut out ink.
       if (glitch) frame.bands = [28 + Math.floor(random() * 9), 54 + Math.floor(random() * 9)];
       render(frame);
-      if (step++ < 6) later(tick, duration / 6);
+      if (step++ < 6) later(tick, Math.max(0, Math.ceil(started + step * duration / 6 - performance.now())));
       else done();
     };
     tick();
@@ -70,11 +71,11 @@ export function createWordmarkSequence(render: (frame: WordmarkFrame) => void) {
       if (reducedMotion) { render(latinFrame); return; }
       random = seededRandom(seed);
       transition("hi", () => later(() => transition("ur", () =>
-        later(() => transition("en", () => { active = false; }), 750)), 750));
+        later(() => transition("en", () => { active = false; }), 375)), 375));
     },
     leave(reducedMotion = false) {
       cancel();
-      if (active && !reducedMotion) transition("en", () => { active = false; }, 150);
+      if (active && !reducedMotion) transition("en", () => { active = false; }, 100);
       else { active = false; render(latinFrame); }
     },
     dispose() { cancel(); active = false; },

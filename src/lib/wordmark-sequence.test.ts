@@ -6,29 +6,29 @@ describe("wordmark sequence", () => {
   let sequence: ReturnType<typeof createWordmarkSequence>;
   beforeEach(() => { vi.useFakeTimers(); frames = []; sequence = createWordmarkSequence((frame) => frames.push(frame)); });
   afterEach(() => { sequence.dispose(); vi.useRealTimers(); });
-  it("holds Hindi then Urdu for 750ms each and finishes once in Latin at 2490ms", () => {
+  it("holds Hindi then Urdu for 375ms each and finishes once in Latin at 1410ms", () => {
     sequence.start();
-    vi.advanceTimersByTime(330);
+    vi.advanceTimersByTime(220);
     expect(frames.at(-1)).toEqual({ script: "hi", text: wordmarks.hi, glitch: false });
-    vi.advanceTimersByTime(749);
+    vi.advanceTimersByTime(374);
     expect(frames.at(-1)?.script).toBe("hi");
-    vi.advanceTimersByTime(331);
+    vi.advanceTimersByTime(221);
     expect(frames.at(-1)).toEqual({ script: "ur", text: wordmarks.ur, glitch: false });
-    vi.advanceTimersByTime(749);
+    vi.advanceTimersByTime(374);
     expect(frames.at(-1)?.script).toBe("ur");
-    vi.advanceTimersByTime(331);
+    vi.advanceTimersByTime(221);
     expect(frames.at(-1)).toEqual({ script: "en", text: wordmarks.en, glitch: false });
     expect(vi.getTimerCount()).toBe(0);
     expect(frames.filter((frame) => frame.script !== "en").every((frame) => frame.text === wordmarks[frame.script])).toBe(true);
   });
-  it("cancels the old sequence on leave and returns in 150ms", () => {
-    sequence.start(); vi.advanceTimersByTime(400); sequence.leave(); vi.advanceTimersByTime(150);
+  it("cancels the old sequence on leave and returns in 100ms", () => {
+    sequence.start(); vi.advanceTimersByTime(400); sequence.leave(); vi.advanceTimersByTime(100);
     expect(frames.at(-1)).toEqual({ script: "en", text: wordmarks.en, glitch: false });
     expect(vi.getTimerCount()).toBe(0);
   });
   it("restarts on re-entry even during the return glitch", () => {
-    sequence.start(); vi.advanceTimersByTime(1300); sequence.leave(); vi.advanceTimersByTime(50);
-    sequence.start(); vi.advanceTimersByTime(330);
+    sequence.start(); vi.advanceTimersByTime(1300); sequence.leave(); vi.advanceTimersByTime(34);
+    sequence.start(); vi.advanceTimersByTime(220);
     expect(frames.at(-1)?.script).toBe("hi");
     vi.runAllTimers(); expect(frames.at(-1)?.text).toBe(wordmarks.en);
   });
@@ -59,7 +59,7 @@ describe("wordmark sequence", () => {
       if (frame.script === "en") expect(frame.text).toMatch(/^[Ssangak_\/=+<>]{8}$/);
     }
     frames = []; sequence.start(false, 42); vi.advanceTimersByTime(400); frames = [];
-    sequence.leave(); vi.advanceTimersByTime(50);
+    sequence.leave(); vi.advanceTimersByTime(34);
     expect(frames.map((frame) => frame.text.slice(0, 2))).toEqual(["Sa", "Sa", "Sa"]);
     expect(frames[1].text.startsWith("Sanga")).toBe(true);
     expect(frames[2].text).toBe("Sanganak");
