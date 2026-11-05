@@ -410,3 +410,59 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* The hidden Latin sizer preserves the original lockup width across scripts. */
+.glitch-wordmark {
+  display: inline-grid;
+  align-items: center;
+  position: relative;
+  width: auto;
+  height: 2em;
+  overflow: visible clip;
+  isolation: isolate;
+  vertical-align: middle;
+}
+.wordmark-sizer { visibility: hidden; white-space: nowrap; }
+.wordmark-layer svg { fill: currentColor; overflow: visible; }
+.wordmark-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+.wordmark-layer[lang="hi"] {
+  font-family: var(--font-wordmark-hi), "Noto Sans Devanagari", sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+.wordmark-layer[lang="ur"] {
+  font-family: var(--font-wordmark-ur), "Noto Sans Arabic", sans-serif;
+  font-weight: 600;
+  letter-spacing: normal;
+  /* In an RTL flex row, flex-end is the left edge, next to the mascot. */
+  justify-content: flex-end;
+}
+.wordmark-teal, .wordmark-coral { visibility: hidden; }
+.glitch-wordmark[data-glitch="true"] .wordmark-ink {
+  -webkit-mask-image: linear-gradient(#000 var(--band-teal), transparent var(--band-teal) calc(var(--band-teal) + 12%), #000 calc(var(--band-teal) + 12%) var(--band-coral), transparent var(--band-coral) calc(var(--band-coral) + 12%), #000 calc(var(--band-coral) + 12%));
+  mask-image: linear-gradient(#000 var(--band-teal), transparent var(--band-teal) calc(var(--band-teal) + 12%), #000 calc(var(--band-teal) + 12%) var(--band-coral), transparent var(--band-coral) calc(var(--band-coral) + 12%), #000 calc(var(--band-coral) + 12%));
+}
+.glitch-wordmark[data-glitch="true"] .wordmark-teal,
+.glitch-wordmark[data-glitch="true"] .wordmark-coral {
+  visibility: visible;
+  pointer-events: none;
+  animation: wordmark-slice 100ms steps(1, end) infinite;
+}
+.wordmark-teal { color: #2db7b0; clip-path: inset(var(--band-teal) -4px calc(88% - var(--band-teal)) -4px); }
+.wordmark-coral { color: #ef5b4c; clip-path: inset(var(--band-coral) -4px calc(88% - var(--band-coral)) -4px); animation-direction: reverse !important; }
+@keyframes wordmark-slice {
+  0%, 100% { transform: translateX(3px); }
+  33% { transform: translateX(-3px); }
+  66% { transform: translateX(1px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glitch-wordmark .wordmark-layer { animation: none !important; mask-image: none !important; -webkit-mask-image: none !important; }
+  .glitch-wordmark .wordmark-teal, .glitch-wordmark .wordmark-coral { visibility: hidden; }
+}

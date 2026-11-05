@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Bricolage_Grotesque, Noto_Sans_Devanagari, Noto_Sans_Arabic } from "next/font/google";
 import localFont from "next/font/local";
 import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
@@ -8,6 +8,21 @@ const displayFont = Bricolage_Grotesque({
   variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
+});
+
+const hindiFont = Noto_Sans_Devanagari({
+  variable: "--font-wordmark-hi",
+  weight: "700",
+  subsets: ["devanagari"],
+  display: "swap",
+  preload: false,
+});
+const urduFont = Noto_Sans_Arabic({
+  variable: "--font-wordmark-ur",
+  weight: "600",
+  subsets: ["arabic"],
+  display: "swap",
+  preload: false,
 });
 
 // Paper Term (SIL OFL 1.1, see ./fonts/paper-term/OFL.txt): Paper Mono with
@@ -61,7 +76,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${displayFont.variable} ${monoFont.variable}`}>
+    <html lang="en" className={`${displayFont.variable} ${monoFont.variable} ${hindiFont.variable} ${urduFont.variable}`}>
       <body>
         {children}
         <SiteFooter />
